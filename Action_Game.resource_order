@@ -25,6 +25,7 @@
     {"name":"obj_enemy_manager","order":5,"path":"objects/obj_enemy_manager/obj_enemy_manager.yy",},
     {"name":"obj_player","order":1,"path":"objects/obj_player/obj_player.yy",},
     {"name":"obj_shadow_player","order":1,"path":"objects/obj_shadow_player/obj_shadow_player.yy",},
+    {"name":"change_fullness","order":2,"path":"scripts/change_fullness/change_fullness.yy",},
     {"name":"spr_tile","order":5,"path":"sprites/spr_tile/spr_tile.yy",},
     {"name":"obj_camera","order":6,"path":"objects/obj_camera/obj_camera.yy",},
     {"name":"import_json","order":1,"path":"scripts/import_json/import_json.yy",},

@@ -2,31 +2,36 @@
     "empty": {
         "attack_chance": 0,
         "idle": "spr_idle000",
-        "run": "spr_run000"
+        "run": "spr_run000",
+        "suck": "spr_suck000"
     },
     
     "quarter": {
         "attack_chance": 5,
         "idle": "spr_idle025",
-        "run": "spr_run025"
+        "run": "spr_run025",
+        "suck": "spr_suck025"
     },
     
     "half": {
         "attack_chance": 10,
         "idle": "spr_idle050",
-        "run": "spr_run050"
+        "run": "spr_run050",
+        "suck": "spr_suck050"
     },
     
     "thref": {
         "attack_chance": 15,
         "idle": "spr_idle075",
-        "run": "spr_run075"
+        "run": "spr_run075",
+        "suck": "spr_suck075"
     },
     
     "full": {
         "attack_chance": 20,
         "idle": "spr_idle100",
-        "run": "spr_run100"
+        "run": "spr_run100",
+        "suck": "spr_suck100"
     }
 
 }

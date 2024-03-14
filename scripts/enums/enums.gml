@@ -1,4 +1,3 @@
-
 enum EnemyState
 {
 	First_move,
@@ -9,9 +8,7 @@ enum EnemyState
 
 enum PlayerState
 {
-	_empty,
-	_quarter,
-	_half,
-	_tref,
-	_full
+	sucking,
+	attacking,
+	running
 }

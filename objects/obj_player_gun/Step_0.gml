@@ -15,7 +15,7 @@ else{
 
 timing--;
 
-if (mouse_check_button_pressed(1) && timing<=0){
+if (mouse_check_button_pressed(1) && timing<=0 && obj_player.state!=PlayerState.attacking){
 	var bx=x+lengthdir_x(38,angle);
 	var by=y+lengthdir_y(38,angle);
 	var bullet=instance_create_layer(bx,by,"Bullets",obj_player_bullet);
