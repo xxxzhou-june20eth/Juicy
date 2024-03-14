@@ -27,6 +27,7 @@
     {"name":"obj_shadow_player","order":1,"path":"objects/obj_shadow_player/obj_shadow_player.yy",},
     {"name":"spr_tile","order":5,"path":"sprites/spr_tile/spr_tile.yy",},
     {"name":"obj_camera","order":6,"path":"objects/obj_camera/obj_camera.yy",},
+    {"name":"import_json","order":1,"path":"scripts/import_json/import_json.yy",},
     {"name":"spr_hitbox_wall","order":9,"path":"sprites/spr_hitbox_wall/spr_hitbox_wall.yy",},
     {"name":"obj_player_gun","order":1,"path":"objects/obj_player_gun/obj_player_gun.yy",},
     {"name":"obj_player_bullet","order":1,"path":"objects/obj_player_bullet/obj_player_bullet.yy",},

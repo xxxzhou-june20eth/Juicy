@@ -1,0 +1,35 @@
+{
+        "hp": 100,
+        "spd": 4,
+        "PlayerState" :{
+            "empty": {
+                "attack_chance": 0,
+                "idle": "spr_idle000",
+                "run": "spr_run000"
+            },
+            
+            "quarter": {
+                "attack_chance": 5,
+                "idle": "spr_idle025",
+                "run": "spr_run025"
+            },
+            
+            "half": {
+                "attack_chance": 10,
+                "idle": "spr_idle050",
+                "run": "spr_run050"
+            },
+            
+            "thref": {
+                "attack_chance": 15,
+                "idle": "spr_idle075",
+                "run": "spr_run075"
+            },
+            
+            "full": {
+                "attack_chance": 20,
+                "idle": "spr_idle100",
+                "run": "spr_run100"
+            }
+        }
+}

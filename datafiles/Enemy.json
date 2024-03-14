@@ -1,0 +1,9 @@
+{
+        "spd": 2,
+        "hp": 20,
+        "distance":{
+            "close_distance": 100,
+            "medium_distance": 400,
+            "far_distance": 800
+        }
+}

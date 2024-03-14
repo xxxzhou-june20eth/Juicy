@@ -1,0 +1,19 @@
+{
+    "EnemyBullets":{
+        "damage":10,
+        "spd": 5
+    },
+
+    "WaterBall":{
+        "cost":1,
+        "damage":5,
+        "spd":8
+    },
+
+    "Waterfall":{
+        "cost":10,
+        "damage": 30,
+        "lasting_time":30,
+        "spd":5
+    }
+}

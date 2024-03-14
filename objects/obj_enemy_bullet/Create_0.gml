@@ -1,4 +1,6 @@
-speed=5;
-damage=10;
+Attack=import_json("Attack.json");
+Attack=Attack[?"EnemyBullets"];
+speed=Attack[?"spd"];
+damage=Attack[?"damage"];
 _shadow="";
 
