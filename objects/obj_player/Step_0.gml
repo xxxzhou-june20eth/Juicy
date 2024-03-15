@@ -8,7 +8,7 @@ switch (state){
 		//change sprite
 		if (hmove!=0){
 			sprite_index=runs;
-			image_xscale=hmove;
+			image_xscale=-hmove;
 		}
 		else if (vmove!=0){
 			sprite_index=runs;
@@ -31,7 +31,7 @@ switch (state){
 		if (keyboard_check_pressed(vk_space)){
 			state=PlayerState.sucking;
 		}
-		else if (mouse_check_button_pressed(1)){ //change state to attacking
+		else if (mouse_check_button_pressed(2)){ //change state to attacking
 			attacking_time+=1;
 			if (attacking_time>=5 && !mouse_check_button_released(1)){
 				state=PlayerState.attacking;

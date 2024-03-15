@@ -16,8 +16,8 @@ else{
 timing--;
 
 if (mouse_check_button_pressed(1) && timing<=0 && obj_player.state!=PlayerState.attacking){
-	var bx=x+lengthdir_x(38,angle);
-	var by=y+lengthdir_y(38,angle);
+	var bx=x+image_xscale*lengthdir_x(sprite_width,angle);
+	var by=y+image_xscale*lengthdir_y(sprite_width,angle);
 	var bullet=instance_create_layer(bx,by,"Bullets",obj_player_bullet);
 	var hitbox=instance_create_depth(bx,by,0,obj_hitbox);
 	var _shadow=instance_create_layer(bx,by,"Shadow",obj_shadow);
