@@ -14,3 +14,10 @@ enum PlayerState
 	attacking,
 	running
 }
+
+enum FootPrintState
+{
+	wet,
+	dry,
+	pool
+}

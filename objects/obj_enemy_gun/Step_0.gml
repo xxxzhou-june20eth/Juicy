@@ -26,7 +26,7 @@ if (timing<=0){
 	audio_play_sound(Enemy_shoot,1,false);
 	bullet.direction=point_direction(x,y,obj_player.x,obj_player.y)+irandom_range(-3,3);
 	bullet.image_angle=angle;
-	CD=irandom_range(70,120);
+	CD=irandom_range(120,180);
 	timing=CD;
 }
 

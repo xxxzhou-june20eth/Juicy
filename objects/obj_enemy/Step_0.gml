@@ -120,7 +120,7 @@ if (knockback){
 if (hp<=0){
 	instance_destroy(gun);
 	dead=true;
-	image_speed=0;
+	sprite_index=spr_enemy_dead
 	
 	if (timing<=0){
 		speed=0;

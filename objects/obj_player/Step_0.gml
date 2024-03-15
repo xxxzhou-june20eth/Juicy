@@ -1,7 +1,7 @@
-var hmove=keyboard_check(ord("D"))-keyboard_check(ord("A"));
-var vmove=keyboard_check(ord("S"))-keyboard_check(ord("W"));
+hmove=keyboard_check(ord("D"))-keyboard_check(ord("A"));
+vmove=keyboard_check(ord("S"))-keyboard_check(ord("W"));
 var suck=keyboard_check(vk_space);
-var waterball=keyboard_check(ord("J"));
+var waterball=mouse_check_button(1);
 var waterfall=keyboard_check(ord("K"));
 var px=x;
 var py=y;
@@ -57,7 +57,11 @@ switch (state){
 	break;
 	
 	case PlayerState.sucking:
-		
+			
+			if (!audio_is_playing(snd_sucking)){
+				audio_play_sound(snd_sucking,1,false);
+			}
+			
 			//add liquid to the cups
 			liquid_contained++;
 			//change sprites while sucking
@@ -79,6 +83,11 @@ switch (state){
 	break;
 	
 	case PlayerState.antisuck:
+	
+		if (audio_is_playing(snd_sucking)){
+			audio_pause_sound(snd_sucking);
+		}
+		
 		reverse_animation(PlayerState.running);
 		if (image_index<=3){
 			obj_player_gun.visible=true;
@@ -120,6 +129,11 @@ switch (state){
 		}
 	break;
 }
+
+if (wet>=0){
+	wet--;
+}
+
 //collision
 if (place_meeting(x+2,y,obj_rock)){
 	x=px;
