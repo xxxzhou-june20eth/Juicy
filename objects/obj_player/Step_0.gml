@@ -37,8 +37,10 @@ switch (state){
 		//change state
 		if (suck){
 			if (place_meeting(x,y,obj_pool) && liquid_contained<=90){
+				var i=-image_xscale;
 				state=PlayerState.suck_ani;
 				sprite_index=sucks;
+				image_xscale=i;
 			}
 		}
 		else if (waterfall){
@@ -83,7 +85,6 @@ switch (state){
 	break;
 	
 	case PlayerState.antisuck:
-	
 		if (audio_is_playing(snd_sucking)){
 			audio_pause_sound(snd_sucking);
 		}

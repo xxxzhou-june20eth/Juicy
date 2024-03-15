@@ -24,6 +24,10 @@ function create_hitbox_on_rock(_self,_other,_hitwall){
 			cy-=8;
 		}
 	}
+	else{
+		return -1
+	}
 	var _hitwall1=instance_create_depth(cx,cy,0,_hitwall);
 	_hitwall1.image_angle=ca;
+	return 1;
 }
