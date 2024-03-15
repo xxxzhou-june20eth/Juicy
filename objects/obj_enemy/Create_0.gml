@@ -6,6 +6,12 @@ close_distance=Distance[?"close_distance"];
 med_distance=Distance[?"medium_distance"];
 far_distance=Distance[?"far_distance"];
 
+coordination_x=undefined;
+coordination_y=undefined;
+knockback=false;
+dead=false;
+knew=false;
+
 
 timing=30;
 gun="";

@@ -90,6 +90,7 @@
     {"id":{"name":"spr_pool_80","path":"sprites/spr_pool_80/spr_pool_80.yy",},},
     {"id":{"name":"spr_run000","path":"sprites/spr_run000/spr_run000.yy",},},
     {"id":{"name":"spr_rock","path":"sprites/spr_rock/spr_rock.yy",},},
+    {"id":{"name":"knockback_enemy","path":"scripts/knockback_enemy/knockback_enemy.yy",},},
     {"id":{"name":"spr_gun","path":"sprites/spr_gun/spr_gun.yy",},},
     {"id":{"name":"spr_waterball_hitbox","path":"sprites/spr_waterball_hitbox/spr_waterball_hitbox.yy",},},
     {"id":{"name":"spr_suck075","path":"sprites/spr_suck075/spr_suck075.yy",},},

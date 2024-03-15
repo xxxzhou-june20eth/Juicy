@@ -57,6 +57,7 @@
     {"name":"spr_pool_80","order":1,"path":"sprites/spr_pool_80/spr_pool_80.yy",},
     {"name":"spr_run000","order":1,"path":"sprites/spr_run000/spr_run000.yy",},
     {"name":"spr_rock","order":4,"path":"sprites/spr_rock/spr_rock.yy",},
+    {"name":"knockback_enemy","order":5,"path":"scripts/knockback_enemy/knockback_enemy.yy",},
     {"name":"spr_gun","order":2,"path":"sprites/spr_gun/spr_gun.yy",},
     {"name":"spr_waterball_hitbox","order":2,"path":"sprites/spr_waterball_hitbox/spr_waterball_hitbox.yy",},
     {"name":"spr_suck075","order":3,"path":"sprites/spr_suck075/spr_suck075.yy",},

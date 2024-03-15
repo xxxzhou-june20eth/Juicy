@@ -27,6 +27,7 @@ if (keyboard_check_pressed(ord("J")) && timing<=0 && obj_player.liquid_contained
 	bullet.direction=point_direction(x,y,mouse_x,mouse_y)+irandom_range(-3,3);
 	bullet.image_angle=angle;
 	timing=CD;
+	obj_camera.shake_value=1
 	obj_player.liquid_contained-=Jcost;
 }
 

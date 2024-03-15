@@ -97,9 +97,22 @@ if (y<obj_camera.h/2 || y>room_height-obj_camera.h/2){
 	y=py;
 }
 
+//knock_back
+if (knockback){
+	if (!knew){
+		if (!dead){
+			time=2
+		}
+		else{
+			time=5
+		}
+	}
+	time=knockback_enemy(coordination_x,coordination_y,5,2);
+}
+	
+
 //death
 if (hp<=0){
 	instance_destroy(gun);
-	instance_destroy(_shadow);
-	instance_destroy(self);
+	dead=true;
 }
