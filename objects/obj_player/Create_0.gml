@@ -16,3 +16,4 @@ state=PlayerState.running;
 liquid_contained=0;
 attacking_time=0;
 suck_next=false;
+reverse_ani=false;

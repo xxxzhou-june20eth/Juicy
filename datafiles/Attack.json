@@ -2,24 +2,28 @@
     "EnemyBullets":{
         "damage":10,
         "spd": 5,
-        "juice_hitbox":"spr_enemy_hitbox",
-        "juice_hitwall":"spr_enemy_hitwall"
+        "juice_hitbox":"obj_enemy_hitbox",
+        "juice_hitwall":"obj_enemy_hitwall"
     },
 
     "WaterBall":{
-        "cost":1,
+        "obj": "obj_waterball",
+        "cost":5,
         "damage":5,
         "spd":8,
-        "juice_hitbox":"spr_waterball_hitbox",
-        "juice_hitwall":"spr_waterball_hitwall"
+        "CD": 15,
+        "juice_hitbox":"obj_waterball_hitbox",
+        "juice_hitwall":"obj_waterball_hitwall"
     },
 
     "Waterfall":{
-        "cost":10,
+        "obj": "obj_waterfall",
+        "cost":30,
         "damage": 30,
         "lasting_time":30,
         "spd":5,
-        "juice_hitbox":"spr_waterfall_hitbox",
-        "juice_hitwall":"spr_waterfall_hitwall"
+        "CD": 60,
+        "juice_hitbox":"obj_waterfall_hitbox",
+        "juice_hitwall":"obj_waterfall_hitwall"
     }
 }

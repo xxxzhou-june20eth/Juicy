@@ -8,4 +8,5 @@ function reverse_animation(next_state){
 		sprite_index=runs;
 		image_speed=1;
 	}
+	reverse_ani=false;
 }

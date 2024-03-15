@@ -1,4 +1,4 @@
-if (state=PlayerState.sucking){
-	suck_next=true;
+if (state=PlayerState.suck_ani){
+	state=PlayerState.sucking;
 	image_speed=0;
 }

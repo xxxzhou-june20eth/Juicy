@@ -9,6 +9,8 @@ enum EnemyState
 enum PlayerState
 {
 	sucking,
+	suck_ani,
+	antisuck,
 	attacking,
 	running
 }

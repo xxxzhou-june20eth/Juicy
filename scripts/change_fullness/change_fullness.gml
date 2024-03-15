@@ -18,7 +18,7 @@ function change_fullness(liquid_contained){
 		fuln=Fullness[?"empty"];
 	}
 	
-	runs=asset_get_index(uln[?"run"]);
+	runs=asset_get_index(fuln[?"run"]);
 	idles=asset_get_index(fuln[?"idle"]);
 	sucks=asset_get_index(fuln[?"suck"]);
 	

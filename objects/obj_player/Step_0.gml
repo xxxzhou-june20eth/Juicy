@@ -1,10 +1,50 @@
 var hmove=keyboard_check(ord("D"))-keyboard_check(ord("A"));
 var vmove=keyboard_check(ord("S"))-keyboard_check(ord("W"));
+var suck=keyboard_check(vk_space);
+var waterball=keyboard_check(ord("J"));
+var waterfall=keyboard_check(ord("K"));
 var px=x;
 var py=y;
+var ps=state;
+
+change_fullness(liquid_contained);
+
+/*if (!waterfall && !waterball){
+	if (suck && place_meeting(x,y,obj_pool)){
+		if (liquid_contained<100){
+			if (!suck_next){
+				state=PlayerState.suck_ani;
+			}
+			else{
+				state=PlayerState.
+		}
+		
+		
+		if (image_index>10){
+			image_speed=0;
+			suck_next=true;
+		}
+		else{
+			suck_next=false;
+		}
+	}
+	else{
+		show_debug_message("?")
+		suck_next=false;
+		state=PlayerState.running;
+	}
+}
+else if (waterball){
+	state=PlayerState.running;
+}
+else if (waterfall){
+	state=PlayerState.attacking;
+}*/
+
 
 switch (state){
 	case PlayerState.running:
+	
 		//change sprite
 		if (hmove!=0){
 			sprite_index=runs;
@@ -25,65 +65,57 @@ switch (state){
 		else{
 			x+=hmove*spd;
 			y+=vmove*spd;
-		}
-
-		//change state to sucking
-		if (keyboard_check_pressed(vk_space) && place_meeting(x,y,obj_pool)){
-			state=PlayerState.sucking;
-			sprite_index=sucks;
-		}
-		else if (mouse_check_button_pressed(2)){ //change state to attacking
-			attacking_time+=1;
-			if (attacking_time>=5 && !mouse_check_button_released(1)){
-				state=PlayerState.attacking;
+		}	
+		
+		//change state
+		if (suck){
+			if (place_meeting(x,y,obj_pool) && liquid_contained<=90){
+				state=PlayerState.suck_ani;
+				sprite_index=sucks;
 			}
 		}
-			
+		else if (waterfall){
+			state=PlayerState.attacking;
+		}
+		
+	break;
+	
+	case PlayerState.suck_ani:
+		if (image_index>=3){
+			obj_player_gun.visible=false;
+		}
+		if (keyboard_check_released(vk_space) or waterfall or waterball){
+			state=PlayerState.antisuck;
+		}
 	break;
 	
 	case PlayerState.sucking:
-	
-		if (keyboard_check_pressed(vk_space)){//continuously press spacebar to suck
-			image_speed=1;
-		}
-		else{
-			image_speed=0;
-		}
 		
-		if (suck_next){ //animation done
 			//add liquid to the cups
 			liquid_contained++;
-			
 			//change sprites while sucking
 			change_fullness(liquid_contained);
 			sprite_index=sucks;
 			image_speed=0;
-			image_index=11;
-			
-			//if attacks
-			if (keyboard_check(ord("J"))){
-				suck_next=false;
-			}
-				
-			//if finish sucking
-			if (keyboard_check_released(vk_space)){
-				attack_chance=fuln[?"attack_chance"];
-				reverse_animation(PlayerState.running);
-				suck_next=false;
-			}
-			else{
-				if (liquid_contained>=100){ //if full
+			image_index=10;
+
+			if (liquid_contained>=100){ //if full
 					liquid_contained=100;
-					attack_chance=fuln[?"attack_chance"];
-					reverse_animation(PlayerState.running);
+					state=PlayerState.antisuck;
 					suck_next=false;
-				}
 			}
+			
+			if (keyboard_check_released(vk_space) or waterfall or waterball){
+				state=PlayerState.antisuck;
+			}
+			
+	break;
+	
+	case PlayerState.antisuck:
+		reverse_animation(PlayerState.running);
+		if (image_index<=3){
+			obj_player_gun.visible=true;
 		}
-		else{ //if animation is not done
-			reverse_animation(PlayerState.running);
-		}
-		
 	break;
 		
 }
