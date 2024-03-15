@@ -51,7 +51,9 @@ if (state==FootPrintState.dry){
 }
 }
 else{
-	audio_pause_all();
+	if (obj_player.state !=PlayerState.sucking){
+		audio_pause_all();
+	}
 }
 
 

@@ -13,7 +13,8 @@
         "spd":8,
         "CD": 15,
         "juice_hitbox":"obj_waterball_hitbox",
-        "juice_hitwall":"obj_waterball_hitwall"
+        "juice_hitwall":"obj_waterball_hitwall",
+        "sound_hitwall":"snd_waterball_hitwall"
     },
 
     "Waterfall":{
