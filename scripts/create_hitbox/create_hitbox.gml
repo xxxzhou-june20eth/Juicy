@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function create_hitbox_on_rock(_self,_other){
+function create_hitbox_on_rock(_self,_other,_hitwall){
 	var cx=(_self.x+_other.x)/2;
 	var cy=(_self.y+_other.y)/2;
 	var ca;
@@ -24,6 +24,6 @@ function create_hitbox_on_rock(_self,_other){
 			cy-=8;
 		}
 	}
-	var _hitwall=instance_create_depth(cx,cy,0,obj_hitwall);
-	_hitwall.image_angle=ca;
+	var _hitwall1=instance_create_depth(cx,cy,0,_hitwall);
+	_hitwall1.image_angle=ca;
 }

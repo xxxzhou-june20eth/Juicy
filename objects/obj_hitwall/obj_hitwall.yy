@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_hitbox_wall",
-    "path": "sprites/spr_hitbox_wall/spr_hitbox_wall.yy",
+    "name": "spr_waterball_hitwall",
+    "path": "sprites/spr_waterball_hitwall/spr_waterball_hitwall.yy",
   },
   "spriteMaskId": null,
   "visible": true,

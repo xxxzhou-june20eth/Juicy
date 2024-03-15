@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_player_bullet",
-    "path": "sprites/spr_player_bullet/spr_player_bullet.yy",
+    "name": "spr_waterball",
+    "path": "sprites/spr_waterball/spr_waterball.yy",
   },
   "spriteMaskId": null,
   "visible": true,
