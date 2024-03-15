@@ -4,7 +4,7 @@ var px=x;
 var py=y;
 
 timing--;
-	
+if (!dead){
 switch (state)
 {
 	case EnemyState.Searching:
@@ -79,7 +79,7 @@ switch (state)
 	break;
 	
 }
-
+}
 //collision
 if (place_meeting(x+2,y,obj_rock)){
 	x=px;
@@ -99,15 +99,20 @@ if (y<obj_camera.h/2 || y>room_height-obj_camera.h/2){
 
 //knock_back
 if (knockback){
-	if (!knew){
-		if (!dead){
-			time=2
+	if (!dead){
+		if (!knew){
+		time=2;
+		sd=5;
+		knew=true;
 		}
-		else{
-			time=5
-		}
+	time=knockback_enemy(coordination_x,coordination_y,sd,time);
 	}
-	time=knockback_enemy(coordination_x,coordination_y,5,2);
+	else{
+		direction=point_direction(coordination_x,coordination_y,x,y);
+		speed=10;
+		timing=3;
+	}
+
 }
 	
 
@@ -115,4 +120,9 @@ if (knockback){
 if (hp<=0){
 	instance_destroy(gun);
 	dead=true;
+	image_speed=0;
+	
+	if (timing<=0){
+		speed=0;
+	}
 }

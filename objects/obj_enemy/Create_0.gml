@@ -11,6 +11,7 @@ coordination_y=undefined;
 knockback=false;
 dead=false;
 knew=false;
+time=0;
 
 
 timing=30;

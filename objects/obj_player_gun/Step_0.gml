@@ -14,7 +14,7 @@ else{
 
 timing--;
 
-if (keyboard_check_pressed(ord("J")) && timing<=0 && obj_player.liquid_contained>=Jcost){
+if (mouse_check_button_pressed(1) && timing<=0 && obj_player.liquid_contained>=Jcost){
 	var bx=x+image_xscale*lengthdir_x(sprite_width,angle);
 	var by=y+image_xscale*lengthdir_y(sprite_width,angle);
 	var bullet=instance_create_layer(bx,by,"Bullets",Jattack);

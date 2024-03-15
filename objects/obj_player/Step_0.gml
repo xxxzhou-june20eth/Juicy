@@ -9,39 +9,6 @@ var ps=state;
 
 change_fullness(liquid_contained);
 
-/*if (!waterfall && !waterball){
-	if (suck && place_meeting(x,y,obj_pool)){
-		if (liquid_contained<100){
-			if (!suck_next){
-				state=PlayerState.suck_ani;
-			}
-			else{
-				state=PlayerState.
-		}
-		
-		
-		if (image_index>10){
-			image_speed=0;
-			suck_next=true;
-		}
-		else{
-			suck_next=false;
-		}
-	}
-	else{
-		show_debug_message("?")
-		suck_next=false;
-		state=PlayerState.running;
-	}
-}
-else if (waterball){
-	state=PlayerState.running;
-}
-else if (waterfall){
-	state=PlayerState.attacking;
-}*/
-
-
 switch (state){
 	case PlayerState.running:
 	
@@ -117,7 +84,41 @@ switch (state){
 			obj_player_gun.visible=true;
 		}
 	break;
+	
+	case PlayerState.attacking:
+		//change sprite
+		if (hmove!=0){
+			sprite_index=runs;
+			image_xscale=-hmove;
+		}
+		else if (vmove!=0){
+			sprite_index=runs;
+		}
+		else{
+			sprite_index=idles;
+		}
+
+		//movement
+		if (hmove!=0 && vmove!=0){
+			x+=hmove*spd*0.7;
+			y+=vmove*spd*0.7;
+		}
+		else{
+			x+=hmove*spd;
+			y+=vmove*spd;
+		}	
 		
+		//change state
+		if (suck){
+			if (place_meeting(x,y,obj_pool) && liquid_contained<=90){
+				state=PlayerState.suck_ani;
+				sprite_index=sucks;
+			}
+		}
+		else if (!waterfall){
+			state=PlayerState.running;
+		}
+	break;
 }
 //collision
 if (place_meeting(x+2,y,obj_rock)){
