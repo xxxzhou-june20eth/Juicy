@@ -28,8 +28,9 @@ switch (state){
 		}
 
 		//change state to sucking
-		if (keyboard_check_pressed(vk_space)){
+		if (keyboard_check_pressed(vk_space) && place_meeting(x,y,obj_pool)){
 			state=PlayerState.sucking;
+			sprite_index=sucks;
 		}
 		else if (mouse_check_button_pressed(2)){ //change state to attacking
 			attacking_time+=1;
@@ -41,19 +42,48 @@ switch (state){
 	break;
 	
 	case PlayerState.sucking:
-		//add liquid to the cups
-		liquid_contained++;
-		if (keyboard_check_released(vk_space)){
-			change_fullness(liquid_contained);
-			attack_chance=fuln[?"attack_chance"];
-			state=PlayerState.running;
+	
+		if (keyboard_check_pressed(vk_space)){//continuously press spacebar to suck
+			image_speed=1;
 		}
-		if (liquid_contained>=100){
-			liquid_contained=100;
-			change_fullness(liquid_contained);
-			attack_chance=fuln[?"attack_chance"];
-			state=PlayerState.running;
+		else{
+			image_speed=0;
 		}
+		
+		if (suck_next){ //animation done
+			//add liquid to the cups
+			liquid_contained++;
+			
+			//change sprites while sucking
+			change_fullness(liquid_contained);
+			sprite_index=sucks;
+			image_speed=0;
+			image_index=11;
+			
+			//if attacks
+			if (keyboard_check(ord("J"))){
+				suck_next=false;
+			}
+				
+			//if finish sucking
+			if (keyboard_check_released(vk_space)){
+				attack_chance=fuln[?"attack_chance"];
+				reverse_animation(PlayerState.running);
+				suck_next=false;
+			}
+			else{
+				if (liquid_contained>=100){ //if full
+					liquid_contained=100;
+					attack_chance=fuln[?"attack_chance"];
+					reverse_animation(PlayerState.running);
+					suck_next=false;
+				}
+			}
+		}
+		else{ //if animation is not done
+			reverse_animation(PlayerState.running);
+		}
+		
 	break;
 		
 }

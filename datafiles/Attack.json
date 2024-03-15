@@ -1,19 +1,25 @@
 {
     "EnemyBullets":{
         "damage":10,
-        "spd": 5
+        "spd": 5,
+        "juice_hitbox":"spr_enemy_hitbox",
+        "juice_hitwall":"spr_enemy_hitwall"
     },
 
     "WaterBall":{
         "cost":1,
         "damage":5,
-        "spd":8
+        "spd":8,
+        "juice_hitbox":"spr_waterball_hitbox",
+        "juice_hitwall":"spr_waterball_hitwall"
     },
 
     "Waterfall":{
         "cost":10,
         "damage": 30,
         "lasting_time":30,
-        "spd":5
+        "spd":5,
+        "juice_hitbox":"spr_waterfall_hitbox",
+        "juice_hitwall":"spr_waterfall_hitwall"
     }
 }

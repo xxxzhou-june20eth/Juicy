@@ -15,3 +15,4 @@ attack_chance=fuln[?"attack_chance"];
 state=PlayerState.running;
 liquid_contained=0;
 attacking_time=0;
+suck_next=false;
