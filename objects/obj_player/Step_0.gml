@@ -10,6 +10,9 @@ switch (state){
 			sprite_index=runs;
 			image_xscale=hmove;
 		}
+		else if (vmove!=0){
+			sprite_index=runs;
+		}
 		else{
 			sprite_index=idles;
 		}

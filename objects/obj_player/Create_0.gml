@@ -6,11 +6,10 @@ Fullness=import_json("Player_states.json");
 
 spd=Player[?"spd"];
 hp=Player[?"hp"];
-
 fuln=Fullness[?"empty"];
-runs=fuln[?"run"];
-idles=fuln[?"idle"];
-sucks=fuln[?"suck"];
+runs=asset_get_index(fuln[?"run"]);
+idles=asset_get_index(fuln[?"idle"]);
+sucks=asset_get_index(fuln[?"suck"]);
 attack_chance=fuln[?"attack_chance"];
 
 state=PlayerState.running;

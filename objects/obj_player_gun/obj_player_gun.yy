@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_gun",
-    "path": "sprites/spr_gun/spr_gun.yy",
+    "name": "spr_straw",
+    "path": "sprites/spr_straw/spr_straw.yy",
   },
   "spriteMaskId": null,
   "visible": true,

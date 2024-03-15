@@ -1,5 +1,5 @@
-x=obj_player.x
-y=obj_player.y;
+x=obj_player.x-obj_player.image_xscale*3;
+y=obj_player.y-obj_player.sprite_height/2+1;
 
 angle=point_direction(x,y,mouse_x,mouse_y);
 show_debug_message(angle);
